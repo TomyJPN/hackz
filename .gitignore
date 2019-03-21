@@ -1,8 +1,9 @@
-### Unity
+﻿### Unity
 
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
+[Ii]mportAssets/
 
 *.csproj
 *.unityproj
@@ -85,3 +86,8 @@ app/build/
 /SUGORILA_MAN/.vs/SUGORILA_MAN/v15/Server/sqlite3/*.ide
 /SUGORILA_MAN/.vs/SUGORILA_MAN/v15/Server/sqlite3/storage.ide-shm
 /SUGORILA_MAN/.vs/SUGORILA_MAN/v15/Server/sqlite3/*.ide-wal
+/.vs/hackz/v15/Server/sqlite3/*.lock
+/.vs/hackz/v15/Server/sqlite3/*.ide-shm
+/.vs/hackz/v15/Server/sqlite3/*.ide-wal
+/.vs/hackz/v15/Server/sqlite3/*.ide
+/.vs/hackz/v15/.suo
