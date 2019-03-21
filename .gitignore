@@ -1,8 +1,8 @@
-### Unity
+﻿### Unity
 
 [Ll]ibrary/
 [Tt]emp/
-[Oo]bj/
+[Oo]bj/[Ii]mport[Aa]ssets/
 
 *.csproj
 *.unityproj
