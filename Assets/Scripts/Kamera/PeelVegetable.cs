@@ -25,7 +25,21 @@ public class PeelVegetable : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+  private void OnCollisionEnter(Collision collision) {
+    if (collision.gameObject.tag == "Knife") {
+      Peeling = true;
+      particle.Play();
+    }
+  }
+
+  private void OnCollisionExit(Collision collision) {
+    if (collision.gameObject.tag == "Knife") {
+      Peeling = false;
+      particle.Stop();
+    }
+  }
+
+  private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Knife")
         {
