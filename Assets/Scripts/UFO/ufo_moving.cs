@@ -27,7 +27,9 @@ public class ufo_moving : MonoBehaviour {
   int open = 0;
   Vector3 Move;
   float timeleft;
- // public Text creText;
+  // public Text creText;
+
+  private bool button;  //押されてるか
 
   //x:-5~6.5
   //y:6
@@ -41,7 +43,7 @@ public class ufo_moving : MonoBehaviour {
   // Use this for initialization
   void Start() {
     NowState = 0;
-
+    button = false;
     /*
     float x;
     float z;
@@ -85,7 +87,7 @@ public class ufo_moving : MonoBehaviour {
     //    Debug.Log("cre" + cre);
     //    //ここに処理
     //}
-    
+
     /*
     if (moveFlag == 5 || (debugMode == 1f && (Input.GetKey("right") || Input.GetKey("d")))) {
       Move = new Vector3(3f, 0, 0);
@@ -120,8 +122,8 @@ public class ufo_moving : MonoBehaviour {
     }*/
 
     //最初
-    if (Input.GetKey("space") && NowState == (int)state.idle) {
-       rb.velocity = getVec("L");
+    if ((button || Input.GetKey("space")) && NowState == (int)state.idle) {
+      rb.velocity = getVec("L");
     }
 
     if (NowState == (int)state.getUp) {
@@ -141,16 +143,11 @@ public class ufo_moving : MonoBehaviour {
 
     //新規書き直し
     if (NowState == (int)state.idle && Input.GetKeyUp("space")) {
-      Debug.Log("降りる"+NowState);
-      NowState++;  //1
-      open = 1;
-      rb.velocity = getVec("DOWN");
-      Invoke("openTimer", 0.7f);
-      Invoke("timer", 2.5f);
+      buttonUp();
     }
 
   }
-  
+
   void timer() {
     open = -1;
     Invoke("openTimer", 0.7f);
@@ -178,11 +175,25 @@ public class ufo_moving : MonoBehaviour {
 
 
   private Vector3 getVec(string str) {
-    if (str == "L") return new Vector3(0,0,-5f);
+    if (str == "L") return new Vector3(0, 0, -5f);
     else if (str == "R") return new Vector3(0, 0, 5f);
     else if (str == "UP") return new Vector3(0, 5f, 0);
     else if (str == "DOWN") return new Vector3(0, -5f, 0);
 
-    return new Vector3(0,0,0);
+    return new Vector3(0, 0, 0);
+  }
+
+  public void buttonDown() {
+    button = true;
+  }
+  public void buttonUp() {
+    if (NowState == (int)state.idle) {
+      Debug.Log("降りる" + NowState);
+      NowState++;  //1
+      open = 1;
+      rb.velocity = getVec("DOWN");
+      Invoke("openTimer", 0.7f);
+      Invoke("timer", 2.5f);
+    }
   }
 }
