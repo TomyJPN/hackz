@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class PeelManeger : MonoBehaviour
 {
-    private float peelTime = 10, timeCount, peelLimit;
+    private float peelTime = 3, timeCount, peelLimit = 3;//皮剥きの時間、皮むきの時間のカウント、剥く野菜の最大数
+    [SerializeField]
+    private string[] vegNames;
     private int peelCount;
     [SerializeField]
     PeelVegetable peelVeg;
@@ -41,6 +43,7 @@ public class PeelManeger : MonoBehaviour
                 {
                     //おわた
                     Debug.Log("");
+                    peelCount = 0;
                 }
             }
         }
