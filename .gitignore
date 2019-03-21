@@ -1,0 +1,87 @@
+### Unity
+
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+
+*.csproj
+*.unityproj
+*.sln
+
+#Unity User Specific
+*.userprefs
+*.usertasks
+
+#Mono Developer Project Files
+*.pidb
+*.resources
+test-results/
+
+### iOS向けにXcodeプロジェクトを管理する場合(Xcodeのプロジェクト設定が必要な場合がある、とくにPluginを使っている場合、Splashの4inchがなぜか警告がでるので入れ替えたりとか)
+
+# Xcode
+.DS_Store
+*/build/*
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+profile
+*.moved-aside
+DerivedData
+.idea/
+*.hmap
+
+
+### OSX　Mac用
+
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+## Android Studio
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+
+*.apk
+*.ap_
+*.dex
+*.class
+gen/
+local.properties
+.classpath
+.project
+proguard/
+*.ipr
+*.iws
+app/build/
+
+.idea/*.xml
+
+!.idea/gradle.xml
+!.idea/runConfigurations/*.xml
+/SUGORILA_MAN/Assets/素材
+/SUGORILA_MAN/Assets/素材.meta
+/SUGORILA_MAN/.vs/SUGORILA_MAN/v15/Server/sqlite3/db.lock
+/SUGORILA_MAN/.vs/SUGORILA_MAN/v15/Server/sqlite3/*.ide
+/SUGORILA_MAN/.vs/SUGORILA_MAN/v15/Server/sqlite3/storage.ide-shm
+/SUGORILA_MAN/.vs/SUGORILA_MAN/v15/Server/sqlite3/*.ide-wal
