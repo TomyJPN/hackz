@@ -1,4 +1,4 @@
-﻿### Unity
+### Unity
 
 [Ll]ibrary/
 [Tt]emp/
@@ -85,3 +85,4 @@ app/build/
 /SUGORILA_MAN/.vs/SUGORILA_MAN/v15/Server/sqlite3/*.ide
 /SUGORILA_MAN/.vs/SUGORILA_MAN/v15/Server/sqlite3/storage.ide-shm
 /SUGORILA_MAN/.vs/SUGORILA_MAN/v15/Server/sqlite3/*.ide-wal
+*.json
