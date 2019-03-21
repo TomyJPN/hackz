@@ -1,4 +1,4 @@
-﻿### Unity
+### Unity
 
 [Ll]ibrary/
 [Tt]emp/
@@ -91,3 +91,4 @@ app/build/
 /.vs/hackz/v15/Server/sqlite3/*.ide-wal
 /.vs/hackz/v15/Server/sqlite3/*.ide
 /.vs/hackz/v15/.suo
+.vscode/settings.json
