@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PeelManeger : MonoBehaviour
 {
-    private float peelTime = 3, timeCount, peelLimit = 3;//皮剥きの時間、皮むきの時間のカウント、剥く野菜の最大数
+    private float peelTime = 3, timeCount, peelLimit = 1;//皮剥きの時間、皮むきの時間のカウント、剥く野菜の最大数
     [SerializeField]
     private string[] vegNames;
     private int peelCount;
@@ -17,6 +17,9 @@ public class PeelManeger : MonoBehaviour
 
     [SerializeField]
     private Slider slider;
+
+  public GameObject howtoUI;
+  public GameObject messageUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,9 +44,10 @@ public class PeelManeger : MonoBehaviour
                 timeCount = 0;
                 if (peelCount >= peelLimit)
                 {
-                    //おわた
-                    Debug.Log("");
-                    peelCount = 0;
+          //おわた
+          //peelCount = 0;
+          messageUI.SetActive(true);
+          slider.enabled = false;
                 }
             }
         }
@@ -53,4 +57,8 @@ public class PeelManeger : MonoBehaviour
     {
         slider.value = timeCount / peelTime;
     }
+
+  public void closeUI() {
+    howtoUI.SetActive(false);
+  }
 }

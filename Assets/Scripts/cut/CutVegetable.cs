@@ -28,7 +28,10 @@ public class CutVegetable : MonoBehaviour
             cutCount++;
             if (cutLimit <= cutCount)
             {
-                Instantiate(cutVegetable, vegetable.transform.position, Quaternion.identity);
+
+        Quaternion rote = Quaternion.Euler(new Vector3(0.0f, 0.0f, 90.0f));
+
+        Instantiate(cutVegetable, vegetable.transform.position, rote);
                 cutManeger.CutVegetableCount++;
                 Destroy(vegetable);
             }
