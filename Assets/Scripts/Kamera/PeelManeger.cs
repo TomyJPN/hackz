@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PeelManeger : MonoBehaviour
 {
@@ -48,6 +49,7 @@ public class PeelManeger : MonoBehaviour
           //peelCount = 0;
           messageUI.SetActive(true);
           slider.enabled = false;
+          Invoke("sceneChange", 3.5f);
                 }
             }
         }
@@ -57,7 +59,9 @@ public class PeelManeger : MonoBehaviour
     {
         slider.value = timeCount / peelTime;
     }
-
+  void sceneChange() {
+    SceneManager.LoadScene("Cut");
+  }
   public void closeUI() {
     howtoUI.SetActive(false);
   }

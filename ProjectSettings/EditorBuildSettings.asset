@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cut.unity
     guid: 45fab84ef1280b04392b475e408634cb
+  - enabled: 1
+    path: Assets/Scenes/cook.unity
+    guid: 7ea8dc6504c3df1499d38d2ae073c7eb
   m_configObjects: {}
