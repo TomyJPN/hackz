@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class item_listener : MonoBehaviour {
   public GameObject message;
@@ -27,7 +28,12 @@ public class item_listener : MonoBehaviour {
       if (other.name == "ピーマン") pepperImg.SetActive(true);
       else if (other.name == "ナス") nasuImg.SetActive(true);
       else if (other.name == "トマト") tomatoImg.SetActive(true);
+      Invoke("sceneChange",2.5f);
     }
 
+  }
+
+  void sceneChange() {
+    SceneManager.LoadScene("peel");
   }
 }

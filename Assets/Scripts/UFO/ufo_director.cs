@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ufo_director : MonoBehaviour
 {
+  public GameObject howtoUI;
+  public GameObject button;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +17,8 @@ public class ufo_director : MonoBehaviour
     {
         
     }
+  public void closeMessage() {
+    howtoUI.SetActive(false);
+    button.SetActive(true);
+  }
 }
