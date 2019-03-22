@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class CutVegetable : MonoBehaviour
 {
-    int cutCount, cutLimit = 3;
+    int cutCount, cutLimit = 2;
     [SerializeField]
     private GameObject vegetable, cutVegetable;
+    [SerializeField]
+    private CutManeger cutManeger;
     // Start is called before the first frame update
     void Start()
     {
-        cutCount = 0;
+
     }
 
     // Update is called once per frame
@@ -27,6 +29,7 @@ public class CutVegetable : MonoBehaviour
             if (cutLimit <= cutCount)
             {
                 Instantiate(cutVegetable, vegetable.transform.position, Quaternion.identity);
+                cutManeger.CutVegetableCount++;
                 Destroy(vegetable);
             }
         }
